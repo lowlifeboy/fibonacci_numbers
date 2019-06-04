@@ -11,5 +11,6 @@ ___
 https://developer.mozilla.org/ru/docs/Web/API/Element/innerHTML
 
 Матрица 2х2
-| 1 | 2 |
+
+| 1 | 2 |  
 | 3 | 4 |
