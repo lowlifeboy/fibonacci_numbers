@@ -10,6 +10,6 @@ ___
 
 https://developer.mozilla.org/ru/docs/Web/API/Element/innerHTML
 
-                | 1 | 2 |
-Матрица 2х2 =>
-                | 3 | 4 |
+Матрица 2х2
+| 1 | 2 |
+| 3 | 4 |
