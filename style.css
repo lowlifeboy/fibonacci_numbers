@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
+body {
+  font-family: Roboto Mono, monospace;
+  color: #212121;
+}
+
+.container {
+  width: 1050px;
+}
+
+.matrixContainer {
+  margin: 0 auto;
+}
+
+.matrixContainer h1 {
+  text-align: center;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.matrix__2x2 {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 3px solid #c8b900;
+  background: #ffff72;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.matrix__3x3 {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border: 3px solid #5a9216;
+  background: #bef67a;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.matrix__4x4 {
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  border: 3px solid #00675b;
+  background: #52c7b8;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.matrix__item {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.matrix__2x2__item {
+  background: #ffeb3b;
+}
+
+.matrix__3x3__item {
+  background: #8bc34a;
+}
+
+.matrix__4x4__item {
+  background: #009688;
+}
+
+@media (max-width: 1050px) {
+  .matrix {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 20px;
+  }
+}
