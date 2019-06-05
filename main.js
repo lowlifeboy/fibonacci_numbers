@@ -11,26 +11,30 @@ function fibonacciNumbers(matrixSize) {
 
     let className = '';
 
+    const matrix = document.getElementById('matrix');
+
     for (let i = 2; i <= matrixSize; i++) {
       className = `matrix__${i}x${i}`;
 
-      const matrixElem = document.createElement('div');
-      matrixElem.className = 'matrix__block ' + className;
-      document.getElementsByClassName('matrix').appendChild = matrixElem;
-      console.log(matrixElem);
-
-      document.getElementsByClassName('matrix').appendChild = `<div class="matrix__block ${className}"></div>`;
-      console.log(document.getElementsByClassName('matrix'));
+      const matrixBlock = document.createElement('div');
+      matrixBlock.className = 'matrix__block ' + className;
+      matrix.appendChild(matrixBlock);
 
       matrixCountNumbers = i * i;
       startCount = countPreviousNumbers;
-      // countPreviousNumbers += matrixCountNumbers;
 
       for (countPreviousNumbers; countPreviousNumbers < (startCount + matrixCountNumbers); countPreviousNumbers++) {
+        const matrixElem = document.createElement('div');
+        matrixElem.className = 'matrix__item ' + className + '__item';
+
         if (countPreviousNumbers > 1) {
           fibonacciNumbersArr.push(fibonacciNumbersArr[countPreviousNumbers - 1] + fibonacciNumbersArr[countPreviousNumbers - 2]);
+          matrixElem.innerHTML = fibonacciNumbersArr[countPreviousNumbers];
+          matrixBlock.appendChild(matrixElem);
           document.getElementsByClassName(className).appendChild = `<div class="matrix__item ${className}__item">${fibonacciNumbersArr[countPreviousNumbers]}</div>`;
         }
+        matrixElem.innerHTML = fibonacciNumbersArr[countPreviousNumbers];
+        matrixBlock.appendChild(matrixElem);
         document.getElementsByClassName(className).appendChild = `<div class="matrix__item ${className}__item">${fibonacciNumbersArr[countPreviousNumbers]}</div>`;
       }
     }
@@ -40,5 +44,7 @@ function fibonacciNumbers(matrixSize) {
     return 'Вы ввели недопустимый размер матрицы. Он должty быть целым, больше 1 и меньше 9. ';
   }
 }
+
+// console.log(document.getElementById('matrix'));
 
 console.log(fibonacciNumbers(4));
